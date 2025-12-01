@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Aoc2025", "Aoc2025\Aoc2025.fsproj", "{C2B67F39-3992-4C7A-B9E5-69393CD33CFC}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Utils", "Utils\Utils.fsproj", "{E547EC25-A749-42B9-8DAD-B961A6084B1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2B67F39-3992-4C7A-B9E5-69393CD33CFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2B67F39-3992-4C7A-B9E5-69393CD33CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2B67F39-3992-4C7A-B9E5-69393CD33CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2B67F39-3992-4C7A-B9E5-69393CD33CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E547EC25-A749-42B9-8DAD-B961A6084B1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E547EC25-A749-42B9-8DAD-B961A6084B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E547EC25-A749-42B9-8DAD-B961A6084B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E547EC25-A749-42B9-8DAD-B961A6084B1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
