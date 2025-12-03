@@ -13,7 +13,8 @@ let split (chars: string) (s: string) =
     
 let c2i =
     System.Globalization.CharUnicodeInfo.GetDigitValue
-    
+
+let c2l  = c2i >> int64   
 let c2im (c:char) =
     match c with
     | x when x>='0' && x<='9' ->  System.Globalization.CharUnicodeInfo.GetDigitValue x
