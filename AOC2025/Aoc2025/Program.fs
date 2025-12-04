@@ -1,4 +1,4 @@
 ﻿// For more information see https://aka.ms/fsharp-console-apps
 printfn "Hello from F#"
 
-Dec03.Calc()
+Dec04.Part2()

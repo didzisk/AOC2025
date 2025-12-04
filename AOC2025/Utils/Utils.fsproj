@@ -10,6 +10,7 @@
         <Compile Include="Md5Utils.fs" />
         <Compile Include="StringUtils.fs" />
         <Compile Include="Seq.fs" />
+        <Compile Include="ArrayUtils.fs" />
     </ItemGroup>
 
 </Project>

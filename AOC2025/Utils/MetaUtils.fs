@@ -5,8 +5,11 @@ open System.Net
 open System.Net.Http
 open System.IO
 
-let todayFilename day = @$"d:\Training\Aoc2025files\day{day}.txt"
-let [<Literal>] keyFilename =  @"d:\Training\Aoc2025files\key.txt"
+let [<Literal>] year = 2025
+
+let todayFilename day = @$"d:\Training\Aoc{year}files\day{day}.txt"
+let todayFilenameEx day = @$"d:\Training\Aoc{year}files\day{day}ex.txt"
+let keyFilename =  @$"d:\Training\Aoc{year}files\key.txt"
 let getTodayInput day =
     
     let filename = todayFilename day
@@ -23,11 +26,12 @@ let getTodayInput day =
             use client = new HttpClient(handler)
             client.BaseAddress <- Uri("https://adventofcode.com/")
 
-            let! response = client.GetStreamAsync($"/2025/day/{day}/input")
+            let! response = client.GetStreamAsync($"/{year}/day/{day}/input")
             do! response.CopyToAsync(file)
         }
         |> Async.AwaitTask
         |> Async.RunSynchronously
         printfn $"File %s{filename} created"
     else
-        printfn $"File %s{filename} already exists"    
+        printfn $"File %s{filename} already exists"
+    filename
