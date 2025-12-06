@@ -5,7 +5,6 @@ open FParsec
 
 let day = 2
 
-MetaUtils.getTodayInput day
 let filename = MetaUtils.todayFilename day
 
 let inputString =
