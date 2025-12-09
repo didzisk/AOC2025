@@ -14,6 +14,8 @@
         <Compile Include="Dec05.fs" />
         <Compile Include="Dec06.fs" />
         <Compile Include="Dec07.fs" />
+        <Compile Include="Dec08.fs" />
+        <Compile Include="Dec09.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>
 
