@@ -16,6 +16,7 @@
         <Compile Include="Dec07.fs" />
         <Compile Include="Dec08.fs" />
         <Compile Include="Dec09.fs" />
+        <Compile Include="Dec10.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>
 
@@ -25,6 +26,7 @@
 
     <ItemGroup>
       <PackageReference Include="FParsec" Version="2.0.0-beta2" />
+      <PackageReference Include="Microsoft.Z3" Version="4.12.2" />
     </ItemGroup>
 
 </Project>

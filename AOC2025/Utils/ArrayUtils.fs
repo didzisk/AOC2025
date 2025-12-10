@@ -42,3 +42,8 @@ let validPos (world:'a array array) (r,c) =
     
 let dirsX = [(-1,-1);(-1,0);(-1,1);(0,-1);(0,1);(1,-1);(1,0);(1,1)]
 let dirs = [(-1,0);(0,-1);(0,1);(1,0)] //N W E S
+
+let arraysEqual a b =
+    Array.zip a b
+    |> Array.exists (fun (x,y) -> x<>y)
+    |> not
