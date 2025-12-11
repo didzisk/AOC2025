@@ -12,6 +12,7 @@ type Machine =
     {
         Lights: int
         Switches: int list
+        Switches2: int list list
         Joltages: int list
     }
 
@@ -35,12 +36,20 @@ let parseOneLine (line:string) =
                         )
                     |> Seq.sum
         ]
+    let switches2 =
+        [
+            for s in arr[1..arr.Length-2] do
+                yield
+                    s[1..s.Length-2].Split [|','|]
+                    |> Seq.map int
+                    |> List.ofSeq
+        ]
     let joltages =
         let s = arr[arr.Length-1]
         s.[1..s.Length-2].Split [|','|]
         |> Seq.map int
         |> List.ofSeq
-    {Machine.Lights = lights; Switches = switches; Joltages = joltages}
+    {Machine.Lights = lights; Switches = switches; Switches2 = switches2; Joltages = joltages}
 
     
 
@@ -80,8 +89,13 @@ let calc1 (machines:Machine array) =
     |> Seq.map calc1line
     |> Seq.sum
     
+let calc2line (m:Machine) =
+    0
+    
 let calc2 (machines:Machine array) =
-    ()
+    machines
+    |> Seq.map calc1line
+    |> Seq.sum
     
 let Calc() =
     // inputStrings
