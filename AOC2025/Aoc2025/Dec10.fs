@@ -90,11 +90,23 @@ let calc1 (machines:Machine array) =
     |> Seq.sum
     
 let calc2line (m:Machine) =
+    (*  lights [.........switches............] [target joltages]
+                0    1    2    3     4    5     0 1 2 3
+    ex: [.##.] (3) (1,3) (2) (2,3) (0,2) (0,1) {3,5,4,7}
+    m.Joltages[0] = x4+x5+0x1+0x2+0x3
+    m.Joltages[1] = x1+x5
+    m.Joltages[2] = x2+x3+x4
+    m.Joltages[3] = x0+x1+x3
+    
+    step (buttonNumber) = 
+    
+    *)
+    m.Switches2
     0
     
 let calc2 (machines:Machine array) =
     machines
-    |> Seq.map calc1line
+    |> Seq.map calc2line
     |> Seq.sum
     
 let Calc() =
